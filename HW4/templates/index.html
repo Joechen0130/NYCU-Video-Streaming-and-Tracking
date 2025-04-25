@@ -1,0 +1,32 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script>
+function printMousePos(event) {
+  xOffset = document.getElementById('video').offsetLeft
+  yOffset = document.getElementById('video').offsetTop
+  document.getElementById('position').innerHTML = "x: " +  event.clientX + ", y: " +  event.clientY + ", xOffset:" + xOffset + ", yOffset:" + yOffset;
+  $.ajax({
+    type: "POST",
+    url: "/get_mouse_position",
+    contentType: "application/json",
+    data: JSON.stringify({"x": event.clientX-xOffset,"y": event.clientY-yOffset}),
+    success: function () {
+        console.log("This is never getting printed!!")
+    }
+  });
+}
+
+document.addEventListener("click", printMousePos);
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" href="static/logo.ico" type="image/x-icon"/>
+  <title>VSAT HW4 311554014</title>
+</head>
+<body>
+  <h3>Live Streaming</h3>
+  <p id="position"> </p>
+  <img id="video" src="{{ url_for('video_feed') }}">
+</body>
+</html>
