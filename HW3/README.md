@@ -71,8 +71,6 @@
 
 - Demo via **Google Meet** on:
   - 12/11、12/14、12/15
-- Demo時間填寫表單（11/20 開放填寫）：
-  [Demo Sheet Link](https://docs.google.com/spreadsheets/d/1JXhLFaYfQdGRxpVAcRi2wPsz50cGW9oDUNLhmBSfZr4/edit?usp=sharing)
 
 ---
 
