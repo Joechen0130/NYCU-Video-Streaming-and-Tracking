@@ -1,0 +1,21 @@
+conda create --name Video_streaming_and_tracking python=3.8
+-----------------------------------------------------------
+pip install torch==1.8.1+cu101 torchvision==0.9.1+cu101 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
+conda install pandas
+conda install scikit-learn
+conda install matplotlib
+
+-----------------------------------------------------------
+conda create --name VSAT_HW1 python=3.8
+-----------------------------------------------------------
+conda activate VSAT_HW1
+conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.1 -c pytorch
+conda install pandas
+conda install scikit-learn
+conda install matplotlib
+
+conda env export > env.yaml
+conda env create -f  env.yaml -n VSATHW1
+
+conda deactivate
+conda remove --name VSAT_HW1 --all
