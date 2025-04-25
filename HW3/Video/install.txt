@@ -1,0 +1,14 @@
+conda create --name VSAT_HW3 python=3.6
+conda activate VSAT_HW3
+pip install -r requirements.txt
+
+
+conda create -n VSAT_HW3_deepsort python=3.8
+conda activate VSAT_HW3_deepsort
+pip install -r requirements.txt
+pip install easydict
+    self.update(yaml.load(fo.read(),Loader = yaml.FullLoader))
+pip install imutils
+
+pip uninstall numpy
+pip install -U numpy==1.23.5
